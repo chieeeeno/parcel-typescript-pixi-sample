@@ -1,0 +1,31 @@
+{
+  "name": "parcel-typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./src/index.html -p 8888 --open",
+    "build": "parcel build ./src/index.html --out-dir build",
+    "bundle": "npm run clean:build & npm run build",
+    "watch": "parcel watch ./src/index.html",
+    "clean": "npm run clean:cache & npm run clean:build & npm run clean:dist",
+    "clean:build": "rimraf ./build",
+    "clean:cache": "rimraf .cache",
+    "clean:dist": "rimraf ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/pixi.js": "^4.8.0",
+    "autoprefixer": "^8.6.5",
+    "node-sass": "^4.9.2",
+    "parcel-bundler": "^1.9.7",
+    "postcss-modules": "^1.1.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "pixi.js": "^4.8.2"
+  }
+}
